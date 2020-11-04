@@ -20,7 +20,7 @@ t2db = tarea2db()
 
 date = datetime.datetime.now()
 comunaID = t2db.get_comunaId(form['comuna'].value)
-mascotaID = t2db.get_mascotaId(form['tipo-mascota'].value)
+mascotaID = t2db.get_mascotaId(form['tipo-mascota'].value, form['otra-mascota'].value)
 esterilizado = t2db.respToInt(form['esterilizado-mascota'].value)
 vacunas = t2db.respToInt(form['vacunas-mascota'].value)
 

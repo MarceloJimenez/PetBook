@@ -249,15 +249,8 @@ function selectRegionComuna() {
  */
 function tipoMascotaOtro(){
   var tipoOtro = document.getElementById("tipo-mascota")
-  var container = document.getElementById("otroContainer")
   if( tipoOtro.value === "otro"){
-
-    container.innerHTML = `
-        <div class="entrada">
-            <div class="leyenda"> Escriba su tipo de mascota </div>
-            <input type="text" name="otro" id="otro"  size="40" />
-        </div>
-        `;
+    document.getElementById("otroContainer").style.display = "block";
   }
 }
 /****************************************************
@@ -386,7 +379,12 @@ function informarMascota() {
   </select>
   </div>
 
-   <div id="otroContainer"></div>
+   <div id="otroContainer" style="display: None">
+     <div class="entrada">
+            <div class="leyenda"> Escriba su tipo de mascota </div>
+            <input type="text" name="otra-mascota" id="otro"  size="40" />
+        </div>
+</div>
 
 
 

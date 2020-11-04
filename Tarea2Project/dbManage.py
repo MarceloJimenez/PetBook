@@ -59,16 +59,17 @@ class tarea2db:
         return str(data[0][0])
 
 
-    def get_mascotaId(self, mascota):
+    def get_mascotaId(self, mascota, otraMascota):
         if mascota == 'otro':
-            form = cgi.FieldStorage()
-            otro = form['otro'].value
             try:
-                insert = f'INSERT INTO tipo_mascota (nombre) VALUES ({otro});'
-                self.cursor.execute(insert)
+                insert = '''
+                INSERT INTO tipo_mascota (nombre) 
+                VALUES (%s);
+                '''
+                self.cursor.execute(insert, (otraMascota, ))
                 self.db.commit()
                 print(self.cursor.rowcount, "Record inserted successfully into tipo_mascota table")
-                sql = "SELECT id FROM tipo_mascota WHERE nombre LIKE  '%" + mascota + "%';"
+                sql = "SELECT id FROM tipo_mascota WHERE nombre LIKE  '%" + otraMascota + "%';"
                 self.cursor.execute(sql)
                 data = self.cursor.fetchall()
                 return str(data[0][0])
