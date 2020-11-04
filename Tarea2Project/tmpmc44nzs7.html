@@ -1,0 +1,54 @@
+<body bgcolor="#f0f0f8">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#6622aa">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>KeyError</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial">Python 3.8.5: C:\Users\marce\AppData\Local\Programs\Python\Python38\python.exe<br>Wed Nov  4 07:54:29 2020</font></td></tr></table>
+    
+<p>A problem occurred in a Python script.  Here is the sequence of
+function calls leading up to the error, in the order they occurred.</p>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file://C:\xampp\htdocs\Tarea2Project\response.py">C:\xampp\htdocs\Tarea2Project\response.py</a> in <strong>&lt;module&gt;</strong></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;20</small>&nbsp;<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;21</small>&nbsp;date&nbsp;=&nbsp;datetime.datetime.now()<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;&nbsp;22</small>&nbsp;comunaID&nbsp;=&nbsp;t2db.get_comunaId(form['comuna'].value)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;23</small>&nbsp;mascotaID&nbsp;=&nbsp;t2db.get_mascotaId(form['tipo-mascota'].value)<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;&nbsp;24</small>&nbsp;esterilizado&nbsp;=&nbsp;t2db.respToInt(form['esterilizado-mascota'].value)<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090">comunaID <em>undefined</em>, <strong>t2db</strong>&nbsp;= &lt;dbManage.tarea2db object&gt;, t2db.<strong>get_comunaId</strong>&nbsp;= &lt;bound method tarea2db.get_comunaId of &lt;dbManage.tarea2db object&gt;&gt;, <strong>form</strong>&nbsp;= FieldStorage(None, None, []), ].<strong>value</strong>&nbsp;= []</font></small></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr><td bgcolor="#d8bbff"><big>&nbsp;</big><a href="file://C:\Users\marce\AppData\Local\Programs\Python\Python38\lib\cgi.py">C:\Users\marce\AppData\Local\Programs\Python\Python38\lib\cgi.py</a> in <strong>__getitem__</strong>(self=FieldStorage(None, None, []), key='comuna')</td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;518</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;item.name&nbsp;==&nbsp;key:&nbsp;found.append(item)<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;519</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;not&nbsp;found:<br>
+</tt></font></td></tr>
+<tr><td bgcolor="#ffccee"><tt>=&gt;<small>&nbsp;&nbsp;520</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raise&nbsp;KeyError(key)<br>
+</tt></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;521</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;len(found)&nbsp;==&nbsp;1:<br>
+</tt></font></td></tr>
+<tr><td><font color="#909090"><tt>&nbsp;&nbsp;<small>&nbsp;&nbsp;522</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;found[0]<br>
+</tt></font></td></tr>
+<tr><td><small><font color="#909090"><em>builtin</em> <strong>KeyError</strong>&nbsp;= &lt;class 'KeyError'&gt;, <strong>key</strong>&nbsp;= 'comuna'</font></small></td></tr></table><p><strong>KeyError</strong>: 'comuna'
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>args&nbsp;=
+('comuna',)
+<br><tt><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</small>&nbsp;</tt>with_traceback&nbsp;=
+&lt;built-in method with_traceback of KeyError object&gt;
+
+
+<!-- The above is a description of an error in a Python program, formatted
+     for a Web browser because the 'cgitb' module was enabled.  In case you
+     are not reading this in a Web browser, here is the original traceback:
+
+Traceback (most recent call last):
+  File "C:/xampp/htdocs/Tarea2Project/response.py", line 22, in &lt;module&gt;
+    comunaID = t2db.get_comunaId(form['comuna'].value)
+  File "C:\Users\marce\AppData\Local\Programs\Python\Python38\lib\cgi.py", line 520, in __getitem__
+    raise KeyError(key)
+KeyError: 'comuna'
+
+-->

@@ -1,0 +1,36 @@
+import mysql.connector
+
+
+class tarea2db:
+
+    def __init__(self):
+        self.db = mysql.connector.connect(
+            host="localHost",
+            user="cc500235_u",
+            password="trumAenean",
+            database="cc500235_db",
+        )
+        self.cursor = self.db.cursor()
+
+    def save_data(self, data):
+        sql = ''' 
+            INSERT INTO pedido (nombre, telefono, direccion, comuna, tipo_masa, ingrediente, comentario)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+            '''
+        self.cursor.execute(sql, data)
+        self.db.commit()
+
+    def get_all(self, tableName):
+        self.cursor.execute(f'SELECT * FROM {tableName}')
+        return self.cursor.fetchall()
+
+    def save_domicilio(self, domicilio):
+        sql = '''
+            INSERT INTO domicilio(fecha_ingreso, comuna_nombre_calle, numero, sector, nombre_contacto, email, celular)
+            VALUES(%s, %s, %s, %s, %s, %s, %s, %s);
+            '''
+        self.cursor.execute(sql, domicilio)
+        self.db.commit()
+        return True
+
+

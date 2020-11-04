@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Tarea 2 CC5002</title>
+  <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+  <script src="js/Utils.js"></script>
+  <script src="js/validador.js"></script>
+</head>
+<body>
+<div class="cabecera">
+  <div class="titulo center" id="cabeza"> PetBook </div>
+  <img alt="Pet ilustration" class="center" id="petIlustration" src="img/portada.jpg">
+  <div id="welcome">¡ Bienvenido al primer censo online de mascotas ! Sube la
+  información de tus mascotas y encuentra otras mascotas en tu comunidad.</div>
+</div>
+<hr>
+
+<div id="outer">
+  <div class="inner"><button class="btn1" onclick="return informarMascota();">Informar Mascota</button></div>
+  <div class="inner"><button class="btn1" onclick="return verListadoMascotas();">Ver Listado Mascotas</button></div>
+  <div class="inner"><button class="btn1" onclick="return estadisticas();">Estadísticas Mascotas</button></div>
+</div>
+<div id="informarContainer" class="center"></div>
+<div id="estadistiContainer" class="center"></div>
+<div id="listadoContainer" class="center"></div>
+
+<hr>
+<div class="main center">
+<div class="divTable center"  >
+<div class="divTableBody">
+<div class="divTableRow cabeceraTabla">
+<div class="divTableCell">Comuna</div>
+<div class="divTableCell">Calle</div>
+<div class="divTableCell">Tipo-Cantidad</div>
+<div class="divTableCell imgCell">Imagen</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Santiago</div>
+<div class="divTableCell">Av.Portugal 2888</div>
+<div class="divTableCell">Gato: 1 </div>
+<div class="divTableCell imgCell"><img alt="Gatolin1" class="smallPetImage center clearfix" src="img/gatino1.jpg"></div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">San Bernardo</div>
+<div class="divTableCell">12 de febrero 123</div>
+<div class="divTableCell">Perros: 3 Gato:1</div>
+<div class="divTableCell imgCell"><img alt="sodas" class="smallPetImage center clearfix " src="img/sodasPets.jpg"></div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Santiago</div>
+<div class="divTableCell">Diesiocho 715</div>
+<div class="divTableCell">Gatos: 2</div>
+<div class="divTableCell imgCell"><img alt="AlmendrasPets" class="smallPetImage center clearfix" src="img/harumota.jpg"></div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">San Bernardo</div>
+<div class="divTableCell">12 de febrero 123</div>
+<div class="divTableCell">Perros: 3 Gato:1</div>
+<div class="divTableCell imgCell"><img alt="sodas" class="smallPetImage center clearfix" src="img/sodasPets.jpg"></div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Santiago</div>
+<div class="divTableCell">Av.Portugal 2888</div>
+<div class="divTableCell">Gato: 1 </div>
+<div class="divTableCell imgCell"><img alt="Gatolin1" class="smallPetImage center clearfix" src="img/gatino1.jpg"></div>
+</div>
+</div>
+</div>
+<!-- DivTable.com -->
+
+
+
+
+
+</div>
+<div id="errorContainer" class="center"></div>
+</body>
+</html>
