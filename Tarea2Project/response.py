@@ -48,7 +48,7 @@ if len(form) > 0:
     if '.jpg' or '.png' in filename:  # validacion formatos permitidos
         completeName = os.path.join(save_path, filename)
         fn = os.path.basename(filename)  # obtener nombre base del archivo
-        open(completeName, 'wb').write(foto.file.read())  # guarda archivo en el servidor
+        open(fn, 'wb').write(foto.file.read())  # guarda archivo en el servidor
         fotoMascota = (
             completeName, filename, mascotaDomicilioID
         )

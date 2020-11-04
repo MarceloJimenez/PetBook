@@ -53,7 +53,7 @@ class tarea2db:
         self.db.commit()
 
     def get_comunaId(self, comuna):
-        sql = f'SELECT id FROM comuna WHERE nombre LIKE %{comuna}%;'
+        sql = "SELECT id FROM comuna WHERE nombre LIKE '%" + comuna + "%';"
         self.cursor.execute(sql)
         data = self.cursor.fetchall()
         return str(data[0][0])
@@ -68,7 +68,7 @@ class tarea2db:
                 self.cursor.execute(insert)
                 self.db.commit()
                 print(self.cursor.rowcount, "Record inserted successfully into tipo_mascota table")
-                sql = f'SELECT id FROM tipo_mascota WHERE nombre LIKE %{otro}%;'
+                sql = "SELECT id FROM tipo_mascota WHERE nombre LIKE  '%" + mascota + "%';"
                 self.cursor.execute(sql)
                 data = self.cursor.fetchall()
                 return str(data[0][0])
@@ -76,7 +76,7 @@ class tarea2db:
                 print("Failed to insert record into MySQL table {}".format(error))
 
         else:
-            sql = f'SELECT id FROM tipo_mascota WHERE nombre LIKE %{mascota}%;'
+            sql = "SELECT id FROM tipo_mascota WHERE nombre LIKE '%" + mascota + "%';"
             self.cursor.execute(sql)
             data = self.cursor.fetchall()
             return str(data[0][0])
